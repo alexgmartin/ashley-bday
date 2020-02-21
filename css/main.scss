@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Raleway:400,400i&display=swap');
+
+:root {
+  --clr-1 : #f25c00;
+  --clr-2: #ec4559;
+  --clr-3: #bf4686;
+  --clr-4: #41537f;
+  --clr-5: #2f4858;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  background: linear-gradient(var(--clr-1), var(--clr-2));
+  min-height: 100vh;
+  margin: 0;
+  color: rgba(black, .7);
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.intro {
+  font-size: 2rem;
+  display: grid;
+  grid: 
+    "hello hello" 75vh
+    "my-name-is kevin" 150vh / max-content 1fr; //2 columns, 1fr each
+    margin-bottom: 60vh;
+    grid-gap: 15px;
+}
+
+.intro-1 {
+  grid-area: hello;
+  align-self: center;
+  position: sticky;
+  top: 2em;
+  margin-bottom: 1.5em;
+}
+
+.intro-2 {
+  grid-area: my-name-is;
+  font-weight: 900;
+  font-style: italic;
+  position: sticky;
+  top: 3.5em;
+  align-self: center;
+  // background: white;
+}
+
+.intro-3 {
+  grid-area: kevin;
+  align-self: end;
+  position: sticky;
+  top: 2em;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.css {
+  text-align: center;
+  margin-bottom: 60vh;
+}
+
+.css-1 {
+  margin-bottom: 60vh;
+  font-style: italic;
+  text-align: center;
+}
+
+.youtube {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1em;
+  grid: "text thumbnails" 1fr / 1fr 1fr;
+  margin-bottom: 50vh;
+
+  p {
+    position: sticky;
+    top: 20vh;
+    grid-area: text;
+    align-self: start;
+  }
+}
+
+.thumbnails {
+  grid-area: thumbnails;
+  margin-top: 60vh;
+  background: var(--clr-5);
+  padding: .3em;
+  position: relative;
+
+  img {
+    z-index: 3;
+    position: relative;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(var(--clr-5) calc(100% - 5em), transparent 95%);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+.surprise {
+  position: sticky;
+  bottom: 100px;
+  color: white;
+  margin-top: 3em;
+  font-weight: 900;
+}
+
+.a-bit-more {
+  background: url('https://picsum.photos/1920/1800');
+  background-size: cover;
+  padding: 2em;
+  font-size: 2rem;
+  height: 200vh;
+  position: relative;
+
+  p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    position: sticky;
+    top: 2em;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(var(--clr-4) 20%, transparent, white 85%);
+  }
+}
+
+.the-end {
+  font-size: 5rem;
+  background: white;
+  text-align: center;
+  padding: 25vh 0 50vh;
+
+}
