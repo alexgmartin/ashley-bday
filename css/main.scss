@@ -111,7 +111,7 @@ img {
   &::after {
     content: "";
     position: absolute;
-    background: linear-gradient(var(--clr-5) calc(100% - 5em), transparent 95%);
+    background: linear-gradient(var(--clr-5) calc(100% - 5em), transparent 94%);
     top: 0;
     bottom: 0;
     right: 0;
@@ -129,8 +129,8 @@ img {
 }
 
 .a-bit-more {
-  background: url('https://picsum.photos/1920/1800');
-  background-size: cover;
+  background: center center no-repeat url('../img/9.jpg');
+  background-size: contain;
   padding: 2em;
   font-size: 2rem;
   height: 200vh;
